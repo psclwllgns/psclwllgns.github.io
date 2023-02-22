@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+  outline: 1px solid #f00 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+#window-info { /* Variable name for a <p> tag that shows the current window size | see debug.js */
+    background-color: white;
+    position: fixed;
+    font-size: 1.6rem;
+    z-index: 999999;
+}

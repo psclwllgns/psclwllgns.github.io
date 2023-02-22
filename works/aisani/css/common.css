@@ -1,0 +1,285 @@
+@charset "UTF-8";
+/* CSS Document */
+html {
+    font-size: 62.5%; /*  16 px default to 10 px default */
+    font-family: '小塚ゴシック Pr6N', kozuka-gothic-pr6n, sans-serif;
+    background-color: #f6f8f9;
+	overflow-x: hidden; /* Fixed a bug that only accured when the food section was active on menu.html */
+}
+body {
+	overflow-x: hidden; /* Fixed a bug that only accured when the food section was active on menu.html */
+}
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: #f6f8f9;
+}
+.element-none {
+    display: none;
+}
+.element-transparent {
+    opacity: 0 !important;
+    overflow-x: hidden;
+}
+.slide-down {
+    transform: translateY(100vh);
+}
+#hamburger-menu {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(13, 37, 56, 0.83); /*EDIT*/
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    z-index: 9001;
+    -webkit-transition: .9s ease-in-out;
+}
+#hamburger-menu ul {
+    display: flex;
+    flex-direction: row-reverse;
+	justify-content: center; /* Fixes not centered problem on firefox (yet to check ios) */
+}
+#hamburger-menu ul li {
+    color: #FFF;
+    writing-mode: vertical-rl;
+    font-size: clamp(2.0rem, 1.7vw, 3.2rem);
+    list-style-type: none;
+    cursor: default;
+    border-right: 1px solid #FFF;
+    padding: clamp(3px, 0.26vw, 5px) clamp(19px, 1.6vw, 30px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+#hamburger-menu ul li:last-child {
+    border-left: 1px solid #FFF;
+}
+#hamburger-menu ul li a:hover {
+    color: rgb(220, 218, 95);
+}
+#menu-links {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-end;
+    height: 40vh;
+    margin-bottom: 50px;
+}
+@media(max-width: 731px) {
+    #hamburger-menu ul li a {}
+}
+/* -----------   Footer   ----------- */
+footer {
+    background-color: #2b2d33;
+    color: #f6f8f9;
+    padding: 130px 10% 30px;
+    position: relative;
+}
+#footer-sitemap {
+    list-style: none;
+    position: absolute;
+    top: 120px;
+    left: 140px;
+}
+#footer-sitemap li {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 1.4rem;
+}
+#footer-contact {
+    font-size: 1.6rem;
+    line-height: 3.0rem;
+    margin-bottom: 115px;
+    display: inline-block;
+    min-width: 520px;
+}
+#footer-contact small {
+    font-size: 1.2rem;
+}
+#footer-contact span:nth-child(5):after {
+    content: "11:30～14:00 (L.O. 13:30) （土曜日限定）";
+}
+.footer-copyright {
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #f6f8f9;
+}
+.footer_sns-icons {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.footer_sns-icons img {
+    margin: 0 20px 0;
+}
+#logo_and_sitemap {
+    min-width: 350px;
+    position: relative;
+}
+#footer_logo {
+    display: block;
+    width: 70%;
+    margin-right: 0;
+    margin-left: auto;
+}
+#footer-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.sitemap-link {
+    text-decoration: none;
+    color: #f6f8f9;
+}
+@media (max-width: 1100px) {
+    #footer-flex {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #logo_and_sitemap {
+        min-width: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    #footer-sitemap {
+        text-align: center;
+        position: static;
+        padding-left: 20px;
+        margin-bottom: 120px;
+    }
+    #footer-sitemap li:nth-child(-n+2) a { /* li children that are a first and second child*/
+        padding: 10px 20px 10px 0;
+        border-right: 1px solid #f6f8f9;
+    }
+    #footer_logo {
+        margin: 0 auto 100px;
+    }
+    #footer-contact {
+        text-align: center;
+    }
+}
+@media (max-width: 600px) {
+    footer {
+        padding: 40px 50px 20px;
+    }
+    #footer-contact {
+        min-width: 300px;
+        font-size: 1.4rem;
+        margin: 0 auto 65px;
+    }
+    #footer-contact small {
+        font-size: 1.2rem;
+    }
+    #footer-contact span:nth-child(even) {
+        display: block;
+        font-size: 1.2rem;
+        line-height: 2.4rem;
+    }
+    #footer-contact span:first-child {
+        display: block;
+    }
+    #footer-contact span:nth-child(5):after {
+        content: "11:30～14:00 (L.O. 13:30)";
+    }
+    #footer-contact span:nth-child(4):after {
+        content: "（土曜日限定）";
+    }
+    .footer-copyright {
+        font-size: 0.8rem;
+    }
+    #footer-sitemap {
+        font-size: 1.6rem;
+    }
+    #footer-address {
+        margin-bottom: 35px;
+    }
+}
+/* ---------------------------------- */
+/* -----------   Header   ----------- */
+header #hamburger-button {
+    position: fixed;
+    width: 50px;
+    height: 40px;
+    top: 30px;
+    right: 50px;
+    cursor: pointer;
+    z-index: 9999;
+    mix-blend-mode: difference;
+}
+/* ---- Untoggled Hamburger Button ---- */
+header .hamburger-line:nth-child(1) {
+    width: 1px;
+    height: 30px;
+    background-color: #FFF;
+    position: absolute;
+    right: 0px;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+header .hamburger-line:nth-child(2) {
+    width: 1px;
+    height: 20px;
+    background-color: #FFF;
+    position: absolute;
+    right: 10px;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+header .hamburger-line:nth-child(3) {
+    width: 1px;
+    height: 14px;
+    background-color: #FFF;
+    position: absolute;
+    right: 20px;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+#h-menu-content .footer_sns-icons {}
+/* ---- Toggled Hamburger Button ---- */
+header .hamburger-line.open-test:nth-child(1) {
+    width: 1px;
+    height: 30px;
+    background-color: rgb(220, 218, 95);
+    position: absolute;
+    right: 10px;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    transform: rotate(45deg);
+}
+header .hamburger-line.open-test:nth-child(2) {
+    width: 1px;
+    height: 20px;
+    background-color: #FFF;
+    position: absolute;
+    transform: translateY(20px);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    opacity: 0;
+}
+header .hamburger-line.open-test:nth-child(3) {
+    width: 1px;
+    height: 30px;
+    background-color: rgb(220, 218, 95);
+    position: absolute;
+    right: 10px;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    transform: rotate(-45deg);
+}

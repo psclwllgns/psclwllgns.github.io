@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i");
+html, body {
+  overflow: hidden;
+  background-color: #FFF;
+  font-size: 62.5%;
+  font-family: "Playfair Display", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 2000px;
+}
+
+small {
+  position: absolute;
+  bottom: 20px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #818181;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  filter: grayscale(1);
+}
+
+.dg {
+  display: none; /* Controls */
+}
+
+#body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 50px;
+  /* --- FORM STYLING --- */
+  /* --- INTERACTIONS ---  */
+  /* --- BASE --- */
+}
+#body ul {
+  text-align: center;
+  list-style-type: none;
+}
+#body ul li {
+  font-size: 1.5rem;
+  display: inline-block;
+  margin: 0 20px;
+}
+#body ul li a {
+  text-decoration: none;
+  color: #000;
+}
+#body ul li a:hover {
+  color: cornflowerblue;
+}
+#body .input-group {
+  position: relative;
+  width: 320px;
+  margin-bottom: 32px;
+  top: 200px;
+}
+#body .contact-field {
+  height: auto;
+  width: 100%;
+  border-width: 0px 0px 1px 0px;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: transparent;
+  transition: border 0.4s ease;
+  font-family: "Helvetica", "Arial", sans-serif;
+  color: #000;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 16px;
+}
+#body .textarea-field {
+  height: auto;
+  width: 100%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-width: 0px 0px 1px 0px;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: transparent;
+  transition: border 0.4s ease;
+  color: #000;
+  font-size: 16px;
+}
+#body .input-label {
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  color: #000;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+}
+#body .form-button {
+  display: block;
+  padding: 10px 16px;
+  background-color: cornflowerblue;
+  color: #fff;
+  font-size: 16px;
+  position: relative;
+  top: 200px;
+}
+#body .form-button:hover {
+  cursor: pointer;
+}
+#body label.input-label {
+  pointer-events: none;
+  transition: 300ms ease all;
+}
+#body .contact-field:not(:-moz-placeholder-shown) ~ label.input-label {
+  bottom: calc(100% - 4px);
+  font-size: 12px;
+}
+#body .contact-field:not(:-ms-input-placeholder) ~ label.input-label {
+  bottom: calc(100% - 4px);
+  font-size: 12px;
+}
+#body .contact-field:focus ~ label.input-label, #body .contact-field:not(:placeholder-shown) ~ label.input-label {
+  bottom: calc(100% - 4px);
+  font-size: 12px;
+}
+#body .textarea-field:not(:-moz-placeholder-shown) ~ label.input-label {
+  bottom: calc(100% - 4px);
+  font-size: 12px;
+}
+#body .textarea-field:not(:-ms-input-placeholder) ~ label.input-label {
+  bottom: calc(100% - 4px);
+  font-size: 12px;
+}
+#body .textarea-field:focus ~ label.input-label, #body .textarea-field:not(:placeholder-shown) ~ label.input-label {
+  bottom: calc(100% - 4px);
+  font-size: 12px;
+}
+#body textarea.textarea-field {
+  resize: none;
+}
+#body section {
+  padding: 64px;
+}
+#body .position-wrapper {
+  width: 100%;
+  max-width: 1360px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#body body {
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+#body input {
+  border-radius: 0;
+  outline: 0;
+}
+#body textarea {
+  border-radius: 0;
+  outline: 0;
+}
+#body input[type=submit] {
+  border: none;
+  box-shadow: none;
+}
+
+@-webkit-keyframes cursor {
+  from {
+    border-color: cornflowerblue;
+  }
+  to {
+    border-color: transparent;
+  }
+}
+
+@keyframes cursor {
+  from {
+    border-color: cornflowerblue;
+  }
+  to {
+    border-color: transparent;
+  }
+}
+@media (max-width: 576px) {
+  .typewriter {
+    font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .typewriter {
+    font-size: 36px;
+  }
+}/*# sourceMappingURL=contact.css.map */
